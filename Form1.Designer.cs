@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnRock = new System.Windows.Forms.Button();
             this.btnScissors = new System.Windows.Forms.Button();
             this.btnPaper = new System.Windows.Forms.Button();
@@ -47,48 +48,56 @@
             // 
             // btnRock
             // 
-            this.btnRock.Location = new System.Drawing.Point(73, 110);
+            this.btnRock.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRock.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRock.Location = new System.Drawing.Point(56, 169);
             this.btnRock.Name = "btnRock";
-            this.btnRock.Size = new System.Drawing.Size(75, 23);
+            this.btnRock.Size = new System.Drawing.Size(119, 51);
             this.btnRock.TabIndex = 0;
             this.btnRock.Text = "Камень";
-            this.btnRock.UseVisualStyleBackColor = true;
+            this.btnRock.UseVisualStyleBackColor = false;
             this.btnRock.Click += new System.EventHandler(this.btnRock_Click);
             // 
             // btnScissors
             // 
-            this.btnScissors.Location = new System.Drawing.Point(73, 185);
+            this.btnScissors.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnScissors.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.btnScissors.Location = new System.Drawing.Point(56, 234);
             this.btnScissors.Name = "btnScissors";
-            this.btnScissors.Size = new System.Drawing.Size(75, 23);
+            this.btnScissors.Size = new System.Drawing.Size(119, 51);
             this.btnScissors.TabIndex = 1;
             this.btnScissors.Text = "Ножницы";
-            this.btnScissors.UseVisualStyleBackColor = true;
+            this.btnScissors.UseVisualStyleBackColor = false;
             this.btnScissors.Click += new System.EventHandler(this.btnScissors_Click);
             // 
             // btnPaper
             // 
-            this.btnPaper.Location = new System.Drawing.Point(73, 265);
+            this.btnPaper.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPaper.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.btnPaper.Location = new System.Drawing.Point(56, 304);
             this.btnPaper.Name = "btnPaper";
-            this.btnPaper.Size = new System.Drawing.Size(75, 23);
+            this.btnPaper.Size = new System.Drawing.Size(119, 51);
             this.btnPaper.TabIndex = 2;
             this.btnPaper.Text = "Бумага";
-            this.btnPaper.UseVisualStyleBackColor = true;
-            this.btnPaper.Click += new System.EventHandler(this.button3_Click);
+            this.btnPaper.UseVisualStyleBackColor = false;
+            this.btnPaper.Click += new System.EventHandler(this.btnPaper_Click);
             // 
             // btnRestart
             // 
-            this.btnRestart.Location = new System.Drawing.Point(764, 402);
+            this.btnRestart.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRestart.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.btnRestart.Location = new System.Drawing.Point(764, 398);
             this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(94, 42);
+            this.btnRestart.Size = new System.Drawing.Size(128, 65);
             this.btnRestart.TabIndex = 3;
             this.btnRestart.Text = "Заного";
-            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.UseVisualStyleBackColor = false;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // picPlayer
             // 
             this.picPlayer.Image = global::RockPaperScissors.Properties.Resources.question;
-            this.picPlayer.Location = new System.Drawing.Point(207, 102);
+            this.picPlayer.Location = new System.Drawing.Point(262, 169);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(182, 186);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -98,7 +107,7 @@
             // picCPU
             // 
             this.picCPU.Image = global::RockPaperScissors.Properties.Resources.question;
-            this.picCPU.Location = new System.Drawing.Point(676, 102);
+            this.picCPU.Location = new System.Drawing.Point(534, 169);
             this.picCPU.Name = "picCPU";
             this.picCPU.Size = new System.Drawing.Size(182, 186);
             this.picCPU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,53 +117,60 @@
             // txtPlayer
             // 
             this.txtPlayer.AutoSize = true;
-            this.txtPlayer.Location = new System.Drawing.Point(278, 83);
+            this.txtPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.txtPlayer.Location = new System.Drawing.Point(333, 150);
             this.txtPlayer.Name = "txtPlayer";
-            this.txtPlayer.Size = new System.Drawing.Size(38, 13);
+            this.txtPlayer.Size = new System.Drawing.Size(43, 13);
             this.txtPlayer.TabIndex = 6;
             this.txtPlayer.Text = "Игрок";
+            this.txtPlayer.Click += new System.EventHandler(this.txtPlayer_Click);
             // 
             // txtCPU
             // 
             this.txtCPU.AutoSize = true;
-            this.txtCPU.Location = new System.Drawing.Point(750, 83);
+            this.txtCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.txtCPU.Location = new System.Drawing.Point(608, 150);
             this.txtCPU.Name = "txtCPU";
-            this.txtCPU.Size = new System.Drawing.Size(29, 13);
+            this.txtCPU.Size = new System.Drawing.Size(32, 13);
             this.txtCPU.TabIndex = 7;
             this.txtCPU.Text = "CPU";
+            this.txtCPU.Click += new System.EventHandler(this.txtCPU_Click);
             // 
             // txtScore
             // 
             this.txtScore.AutoSize = true;
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtScore.Location = new System.Drawing.Point(414, 102);
+            this.txtScore.Location = new System.Drawing.Point(364, 78);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(246, 31);
             this.txtScore.TabIndex = 8;
             this.txtScore.Text = "Игрок: 0 - CPU: 0";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtScore.Click += new System.EventHandler(this.txtScore_Click);
             // 
             // txtTimer
             // 
             this.txtTimer.AutoSize = true;
             this.txtTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtTimer.Location = new System.Drawing.Point(504, 216);
+            this.txtTimer.Location = new System.Drawing.Point(474, 234);
             this.txtTimer.Name = "txtTimer";
             this.txtTimer.Size = new System.Drawing.Size(30, 31);
             this.txtTimer.TabIndex = 9;
             this.txtTimer.Text = "5";
             this.txtTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtTimer.Click += new System.EventHandler(this.txtTimer_Click);
             // 
             // txtRound
             // 
             this.txtRound.AutoSize = true;
             this.txtRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtRound.Location = new System.Drawing.Point(414, 359);
+            this.txtRound.Location = new System.Drawing.Point(406, 402);
             this.txtRound.Name = "txtRound";
-            this.txtRound.Size = new System.Drawing.Size(121, 31);
+            this.txtRound.Size = new System.Drawing.Size(161, 31);
             this.txtRound.TabIndex = 10;
-            this.txtRound.Text = "Раунд 1";
+            this.txtRound.Text = "Раундов: 3";
             this.txtRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtRound.Click += new System.EventHandler(this.txtRound_Click);
             // 
             // countDownTimer
             // 
@@ -165,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(904, 475);
             this.Controls.Add(this.txtRound);
             this.Controls.Add(this.txtTimer);
