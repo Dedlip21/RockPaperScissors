@@ -14,13 +14,14 @@ namespace RockPaperScissors
     public partial class Form1 : Form
     {
 
-        int rounds = 3;
-        int timerPerRound = 6;
+        public int rounds = 3;
+        public int timerPerRound = 6;
         bool gameOver = false;
 
         string[] CPUchoiceList = { "rock", "paper", "scissor", "rock", "scissor", "paper" };
 
-        int randomNumber = 0;
+        public int randomNumber = 0;
+        string command;
 
         Random rnd = new Random();
 
@@ -66,7 +67,7 @@ namespace RockPaperScissors
 
         private void countDownTimerEvent(object sender, EventArgs e)
         {
-            timerPerRound -= 1;
+            timerPerRound--;
 
             txtTimer.Text = timerPerRound.ToString();
 
@@ -96,26 +97,29 @@ namespace RockPaperScissors
                         picCPU.Image = Properties.Resources.scissors;
                         break;
                 }
-            }
 
-            if (rounds > 0)
-            {
-                checkGame();
-            }
-            else
-            {
-                if (playerScore > CPUScore)
+                if (rounds > 0)
                 {
-                    MessageBox.Show("Игрок выиграл игру");
+                    checkGame();
                 }
                 else
                 {
-                    MessageBox.Show("CPU выиграл игру");
+                    if (playerScore > CPUScore)
+                    {
+                        MessageBox.Show("Игрок выиграл игру");
+                    }
+                    else if (playerScore < CPUScore)
+                    {
+                        MessageBox.Show("CPU выиграл игру");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ничья");
+                    }
+
+                    gameOver = true;
                 }
-
-                gameOver = true;
             }
-
 
         }
 
@@ -212,7 +216,7 @@ namespace RockPaperScissors
                 MessageBox.Show("Игрок выиграл, камень сломал ножницы");
             }
 
-            //Ties
+            /*Ties
             else if (playerChoice == "rock" && CPUChoice == "rock")
             {
                 rounds -= 1;
@@ -232,6 +236,16 @@ namespace RockPaperScissors
                 rounds -= 1;
 
                 MessageBox.Show("Ничья!!!");
+            }*/
+
+            else if (playerChoice == "none")
+            {
+                MessageBox.Show("Сделай выбор!");
+            }
+
+            else
+            {
+                MessageBox.Show("Ничья!");
             }
 
             startNextRound();
@@ -267,6 +281,12 @@ namespace RockPaperScissors
         {
 
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            helpWindow help = new helpWindow();
+            help.Show();
+        }
     }
 }
-//https://www.youtube.com/watch?v=9FSW8qU60x8
+/* https://www.youtube.com/watch?v=9FSW8qU60x8 */

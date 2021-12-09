@@ -42,6 +42,7 @@
             this.txtTimer = new System.Windows.Forms.Label();
             this.txtRound = new System.Windows.Forms.Label();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnHelp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCPU)).BeginInit();
             this.SuspendLayout();
@@ -177,12 +178,25 @@
             this.countDownTimer.Interval = 1000;
             this.countDownTimer.Tick += new System.EventHandler(this.countDownTimerEvent);
             // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnHelp.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.btnHelp.Location = new System.Drawing.Point(630, 398);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(128, 65);
+            this.btnHelp.TabIndex = 11;
+            this.btnHelp.Text = "Помощь";
+            this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(904, 475);
+            this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.txtRound);
             this.Controls.Add(this.txtTimer);
             this.Controls.Add(this.txtScore);
@@ -218,6 +232,7 @@
         private System.Windows.Forms.Label txtTimer;
         private System.Windows.Forms.Label txtRound;
         private System.Windows.Forms.Timer countDownTimer;
+        private System.Windows.Forms.Button btnHelp;
     }
 }
 
