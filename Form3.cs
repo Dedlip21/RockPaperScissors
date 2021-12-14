@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace RockPaperScissors
 {
-    public partial class Form1 : Form
+    public partial class Form3 : Form
     {
 
         public int rounds = 3;
@@ -32,7 +32,7 @@ namespace RockPaperScissors
         int playerScore;
         int CPUScore;
 
-        public Form1()
+        public Form3()
         {
             InitializeComponent();
 
@@ -43,9 +43,9 @@ namespace RockPaperScissors
             txtTimer.Text = "5";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace RockPaperScissors
         private void checkGame()
         {
             // CPU wins
-            if(playerChoice== "rock" && CPUChoice == "paper")
+            if (playerChoice == "rock" && CPUChoice == "paper")
             {
                 CPUScore += 1;
 
@@ -256,7 +256,7 @@ namespace RockPaperScissors
         private void startNextRound()
         {
 
-            if (gameOver==true)
+            if (gameOver == true)
             {
                 return;
             }

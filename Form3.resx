@@ -117,32 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtHelp.Text" xml:space="preserve">
-    <value>Добро пожаловать в игру под названием "Камень, Ножницы, Бумага".
-Создатель: Ролан Масленников
-
-Правила игры:
-Идет отчет от 5 до 0
-Всего 3 раунда (нужно выиграть 3 раунда)
-За это время нужно выбрать камень, ножницы либо бумагу
-    * Камень бьет ножницы
-    * Ножницы режет бумагу
-    * Бумага накрывает камень
-По окончани таймера выбирается победитель раунда.
-Победителем становится тот, кто выиграл 3 раунда.
-
-
-Tere tulemast mängu Kivi, paber, käärid.
-Looja: Rolan Maslennikov
-
-Mängu reeglid:
-Aruanne on 5 kuni 0
-Kokku 3 vooru (peate võitma 3 vooru)
-Selle aja jooksul peate valima kivi, käärid või paberi
-    * Kivi lööb kääride vastu
-    * Käärid lõikavad paberit
-    * Paber katab kivi
-Taimeri lõpus valitakse vooru võitja.
-Võidab see, kes võitis 3 vooru.</value>
-  </data>
+  <metadata name="countDownTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

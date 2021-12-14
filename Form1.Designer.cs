@@ -43,6 +43,7 @@
             this.txtRound = new System.Windows.Forms.Label();
             this.countDownTimer = new System.Windows.Forms.Timer(this.components);
             this.btnHelp = new System.Windows.Forms.Button();
+            this.btnEesti = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCPU)).BeginInit();
             this.SuspendLayout();
@@ -190,12 +191,23 @@
             this.btnHelp.UseVisualStyleBackColor = false;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // btnEesti
+            // 
+            this.btnEesti.Location = new System.Drawing.Point(764, 46);
+            this.btnEesti.Name = "btnEesti";
+            this.btnEesti.Size = new System.Drawing.Size(75, 23);
+            this.btnEesti.TabIndex = 12;
+            this.btnEesti.Text = "Eesti";
+            this.btnEesti.UseVisualStyleBackColor = true;
+            this.btnEesti.Click += new System.EventHandler(this.btnEesti_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(904, 475);
+            this.Controls.Add(this.btnEesti);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.txtRound);
             this.Controls.Add(this.txtTimer);
@@ -233,6 +245,7 @@
         private System.Windows.Forms.Label txtRound;
         private System.Windows.Forms.Timer countDownTimer;
         private System.Windows.Forms.Button btnHelp;
+        private System.Windows.Forms.Button btnEesti;
     }
 }
 
