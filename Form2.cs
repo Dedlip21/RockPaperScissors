@@ -24,7 +24,20 @@ namespace RockPaperScissors
 
         private void txtHelp_TextChanged(object sender, EventArgs e)
         {
-            txtHelp.Text = "Добро пожаловать в игру 'камень, ножницы, бумага'";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Form1 back = new Form1();
+            back.Show();
+            this.Hide();
+            //countDownTimer.Enabled = false;
         }
     }
 }

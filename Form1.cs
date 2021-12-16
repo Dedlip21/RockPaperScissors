@@ -18,10 +18,9 @@ namespace RockPaperScissors
         public int timerPerRound = 6;
         bool gameOver = false;
 
-        string[] CPUchoiceList = { "rock", "paper", "scissor", "rock", "scissor", "paper" };
+        string[] CPUchoiceList = { "rock", "paper", "scissors", "rock", "scissors", "paper" };
 
         public int randomNumber = 0;
-        string command;
 
         Random rnd = new Random();
 
@@ -53,7 +52,7 @@ namespace RockPaperScissors
             playerScore = 0;
             CPUScore = 0;
             rounds = 3;
-            txtScore.Text = "Игрок: " + playerScore + " - " + "CPU: " + CPUScore;
+            txtScore.Text = "Mängija: " + playerScore + " - " + "CPU: " + CPUScore;
 
             playerChoice = "none";
 
@@ -71,7 +70,7 @@ namespace RockPaperScissors
 
             txtTimer.Text = timerPerRound.ToString();
 
-            txtRound.Text = "Раундов: " + rounds;
+            txtRound.Text = "Ringid: " + rounds;
 
             if (timerPerRound < 1)
             {
@@ -106,15 +105,15 @@ namespace RockPaperScissors
                 {
                     if (playerScore > CPUScore)
                     {
-                        MessageBox.Show("Игрок выиграл игру");
+                        MessageBox.Show("Mängija võitis mängu");
                     }
                     else if (playerScore < CPUScore)
                     {
-                        MessageBox.Show("CPU выиграл игру");
+                        MessageBox.Show("CPU võitis mängu");
                     }
                     else
                     {
-                        MessageBox.Show("Ничья");
+                        MessageBox.Show("Viik");
                     }
 
                     gameOver = true;
@@ -166,7 +165,7 @@ namespace RockPaperScissors
 
                 rounds -= 1;
 
-                MessageBox.Show("CPU выиграл, бумага накрыла камень");
+                MessageBox.Show("CPU võitis, paper kattis kivi");
             }
 
             else if (playerChoice == "paper" && CPUChoice == "scissors")
@@ -175,7 +174,7 @@ namespace RockPaperScissors
 
                 rounds -= 1;
 
-                MessageBox.Show("CPU выиграл, ножницы разрезали бумагу");
+                MessageBox.Show("CPU võitis, käärid lõikasid paberit");
             }
 
             else if (playerChoice == "scissors" && CPUChoice == "rock")
@@ -184,7 +183,7 @@ namespace RockPaperScissors
 
                 rounds -= 1;
 
-                MessageBox.Show("CPU выиграл, камень сломал ножницы");
+                MessageBox.Show("CPU võitis, kivi murdis käärid");
             }
 
             //Player wins
@@ -195,7 +194,7 @@ namespace RockPaperScissors
 
                 rounds -= 1;
 
-                MessageBox.Show("Игрок выиграл, бумага накрыла камень");
+                MessageBox.Show("Mängija võitis, paper kattis kivi");
             }
 
             else if (playerChoice == "scissors" && CPUChoice == "paper")
@@ -204,7 +203,7 @@ namespace RockPaperScissors
 
                 rounds -= 1;
 
-                MessageBox.Show("Игрок выиграл, ножницы разрезали бумагу");
+                MessageBox.Show("Mängija võitis, käärid lõikasid paberit");
             }
 
             else if (playerChoice == "rock" && CPUChoice == "scissors")
@@ -213,7 +212,7 @@ namespace RockPaperScissors
 
                 rounds -= 1;
 
-                MessageBox.Show("Игрок выиграл, камень сломал ножницы");
+                MessageBox.Show("Mängija võitis, kivi murdis käärid");
             }
 
             /*Ties
@@ -240,12 +239,12 @@ namespace RockPaperScissors
 
             else if (playerChoice == "none")
             {
-                MessageBox.Show("Сделай выбор!");
+                MessageBox.Show("Otsust langetama!");
             }
 
             else
             {
-                MessageBox.Show("Ничья!");
+                MessageBox.Show("Viik!");
             }
 
             startNextRound();
@@ -261,7 +260,7 @@ namespace RockPaperScissors
                 return;
             }
 
-            txtScore.Text = "Игрок: " + playerScore + " - " + "CPU: " + CPUScore;
+            txtScore.Text = "Mängija: " + playerScore + " - " + "CPU: " + CPUScore;
 
             playerChoice = "none";
 
@@ -286,15 +285,8 @@ namespace RockPaperScissors
         {
             helpWindow help = new helpWindow();
             help.Show();
-        }
-
-        private void btnEesti_Click(object sender, EventArgs e)
-        {
-            Form3 eesti = new Form3();
-            eesti.Show();
             this.Hide();
             countDownTimer.Enabled = false;
         }
     }
 }
-/* https://www.youtube.com/watch?v=9FSW8qU60x8 */
