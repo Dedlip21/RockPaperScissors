@@ -18,7 +18,7 @@ namespace RockPaperScissors
         public int timerPerRound = 6;
         bool gameOver = false;
 
-        string[] CPUchoiceList = { "rock", "paper", "scissor", "rock", "scissor", "paper" };
+        string[] CPUchoiceList = { "rock", "paper", "scissors", "rock", "scissors", "paper" };
 
         public int randomNumber = 0;
         string command;
